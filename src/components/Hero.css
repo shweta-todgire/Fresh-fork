@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+.hero {
+  height: 100vh;
+  background: radial-gradient(circle at left, #366c4faf, #004327);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+/* Logo */
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  background-color: #ffffff;   
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #055927;            
+  z-index: 9999;
+}
+
+.logo span {
+  background: linear-gradient(#055927, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.intro h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.intro-highlights{
+  margin-top: 20px;
+  font-weight: 600;
+}
+/* MAIN ROW */
+.hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 90px;
+  margin-top: -150px;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  position: relative;
+  width: 60%;
+  height: 560px;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  width: 32%;
+  animation: fadeUp 0.6s ease;
+  margin-top: 250px;
+}
+
+.hero-right h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.hero-right .description {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-right h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 0.4px;
+}
+
+/* Ingredients */
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.ingredients-list li {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 14px;
+}
+
+.ingredients-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #c8ffdf;
+}
+
+/* Price & CTA */
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #defdea;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 65%;
+  background: #00000057;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 5;
+  padding: 6px 16px;
+  border-radius: 50%;
+  transition: background 0.25s ease;
+}
+
+.arrow:hover {
+  background: #00000085;
+}
+
+.arrow.left { left: 0; }
+.arrow.right { right: 0; }
+
+/* ARC */
+.arc-wrapper {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 450px;
+  pointer-events: none;
+}
+
+.arc-ring {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 3;
+}
+
+.arc-names {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arc-name {
+  position: absolute;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.45s ease;
+}
+
+.arc-name.active {
+  font-size: 26px;
+  color: #fff;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+/* Active Dot */
+.active-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 8px auto 0;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* BOWL */
+.bowl-wrapper {
+  position: absolute;
+  bottom: -320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bowl {
+  width: 600px;
+  height: 560px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: spinIn 0.9s ease;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+}
+
+/* Animations */
+@keyframes spinIn {
+  from {
+    transform: rotate(-60deg) scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
