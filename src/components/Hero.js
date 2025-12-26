@@ -85,7 +85,7 @@ export default function Hero() {
         <h1>Fresh. Healthy. Delicious.</h1>
         <p className="intro-text">
           At FreshFork, we believe food should nourish your body and excite
-          your senses. Our salads are handcrafted daily using farm-fresh,
+          your senses. Our salads & smoothies are handcrafted daily using farm-fresh,
           responsibly sourced ingredients.
         </p>
 
